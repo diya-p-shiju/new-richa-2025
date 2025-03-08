@@ -81,6 +81,13 @@ const dataAdmin = {
       items: [
       ],
     },
+    {
+      title: "Leave Reports",
+      url: "/reports",
+      icon: SquareTerminal,
+      items: [
+      ],
+    },
   ],
 };
 

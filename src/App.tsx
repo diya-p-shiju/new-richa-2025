@@ -13,6 +13,7 @@ import UserView from "./components/user-components/Users/UserView";
 import DepartmentView from "./components/user-components/Departments/DepartmentView";
 import Logout from "./components/user-components/Auth/Logout";
 import { AuthProvider } from "./components/context/ContextProvider";
+import LeaveReportPage from "./pages/Report/LeaveReport";
 
 const AppRoutes = () => (
   <Routes>
@@ -45,6 +46,14 @@ const AppRoutes = () => (
         element={
           <ProtectedRoute roles={["non-teaching-staff", "teaching-staff", "hod", "principal", "director"]}>
             <Admin children={<User />} />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/reports"
+        element={
+          <ProtectedRoute roles={["non-teaching-staff", "teaching-staff", "hod", "principal", "director"]}>
+            <Admin children={<LeaveReportPage />} />
           </ProtectedRoute>
         }
       />
